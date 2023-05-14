@@ -55,6 +55,7 @@ class Cartas{
     }
 }
 
+
 function gerarTabuleiro () {
     if (quantCartas.value < 1 || quantCartas.value % 2 == 1) {
         return alert("Valor Invalido")
@@ -82,13 +83,13 @@ function mostrandoCores () {
         for (let c in cartas) {
             cartas[c].mudarCorNova()
         }
-    }, 1000)
+    }, 700)
 
     setTimeout (() => {
         for (let c in cartas) {
             cartas[c].mudarCorOriginal()
         }
-    }, 2000)    
+    }, 1500)    
 }
 
 function colocandoCoresNovas () {
@@ -97,7 +98,7 @@ function colocandoCoresNovas () {
     coresSortidas.length = cartas.length
     
     do {
-        let corrandom = Math.floor(Math.random() * 8) // DEFININDO COR RANDOM
+        let corrandom = Math.floor(Math.random() * 7) // DEFININDO COR RANDOM
         contador = 0
         while (contador < 2) {
             let indiceRandom = Math.floor(Math.random() * coresSortidas.length) // DEFININDO UM INDICE RANDOM
